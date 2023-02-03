@@ -73,8 +73,8 @@ public class Square {
 
     public void draw(Graphics g)
     {
-        int x = 200 + (col + 1) * BOARD_WIDTH / 3;
-        int y = 100 + (row + 1) * BOARD_HEIGHT / 3;
+        int x = (col + 1) * BOARD_WIDTH / 3;
+        int y = (row + 1) * BOARD_HEIGHT / 3 - 100;
         if (isWinningSquare)
         {
             g.setColor(Color.green);

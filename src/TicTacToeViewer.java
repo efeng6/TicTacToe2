@@ -36,6 +36,34 @@ public class TicTacToeViewer extends JFrame {
                 board[i][j].draw(g);
             }
         }
+        g.setColor(Color.red);
+        g.setFont(new Font("Serif", Font.ITALIC + Font.BOLD, 50));
+        g.drawString("0", 300, 80);
+        g.drawString("1", 500, 80);
+        g.drawString("2", 700, 80);
+
+        g.drawString("0", 150, 200);
+        g.drawString("1", 150, 400);
+        g.drawString("2", 150, 600);
+
+        if (t.getGameOver())
+        {
+            if (t.checkTie())
+            {
+                g.setFont(new Font("Serif", Font.ITALIC + Font.BOLD, 100));
+                g.drawString("Tie!", 400, 800);
+            }
+            else if (t.getWinner().equals(t.O_MARKER))
+            {
+                g.setFont(new Font("Serif", Font.ITALIC + Font.BOLD, 100));
+                g.drawString("O Wins!", 300, 800);
+            }
+            else if (t.getWinner().equals(t.X_MARKER))
+            {
+                g.setFont(new Font("Serif", Font.ITALIC + Font.BOLD, 100));
+                g.drawString("X Wins!", 300, 800);
+            }
+        }
 
     }
 
